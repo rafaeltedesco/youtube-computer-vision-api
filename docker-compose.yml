@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  vision-app:
+    container_name: vision_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      .env
+    volumes:
+      - ./:/app
+    ports:
+      - 3000:3000
